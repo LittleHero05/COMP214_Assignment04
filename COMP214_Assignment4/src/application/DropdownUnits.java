@@ -50,4 +50,26 @@ public class DropdownUnits {
         }
         return departments;
     }
+    
+    public static ObservableList<Employee> fetchEmployees() {
+        ObservableList<Employee> employees = FXCollections.observableArrayList();
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement("SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, SALARY FROM HR_EMPLOYEES")) {
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                employees.add(new Employee(
+                    rs.getInt("EMPLOYEE_ID"),
+                    rs.getString("FIRST_NAME"),
+                    rs.getString("LAST_NAME"),
+                    rs.getString("EMAIL"),
+                    rs.getString("PHONE_NUMBER"),
+                    rs.getDouble("SALARY")
+                ));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return employees;
+    }
+
 }

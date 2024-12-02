@@ -1,0 +1,78 @@
+/* General Scene Styling */
+.root {
+    -fx-font-family: Arial, sans-serif;
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 10;
+}
+
+/* TabPane Styling */
+.tab-pane {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+}
+
+/* Tab Styling */
+.tab {
+    -fx-background-color: #eaeaea;
+    -fx-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.tab:selected {
+    -fx-background-color: #d9d9d9;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 0 0 2 0;
+}
+
+/* Buttons Styling */
+.button {
+    -fx-background-color: #0078d7;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 5 15;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.button:hover {
+    -fx-background-color: #005a9e;
+}
+
+.button:pressed {
+    -fx-background-color: #003f6b;
+}
+
+/* Table Styling */
+.table-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+}
+
+.table-view .column-header {
+    -fx-background-color: #eaeaea;
+    -fx-border-color: #cccccc;
+}
+
+.table-view .cell {
+    -fx-border-color: #e0e0e0;
+}
+
+/* Label Styling */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+/* TextField Styling */
+.text-field {
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+}
+
+/* VBox and HBox Styling */
+.hbox, .vbox {
+    -fx-spacing: 10;
+}
